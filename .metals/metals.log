@@ -1,0 +1,111 @@
+2025.04.09 07:24:08 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json or C:\Users\LENOVO\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2025.04.09 07:24:36 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.09 07:24:36 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.1.
+2025.04.09 07:24:44 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.09 07:24:45 WARN  Build server is not auto-connectable.
+Apr 09, 2025 8:19:34 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 09, 2025 8:22:31 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 09, 2025 8:57:46 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 09, 2025 8:57:52 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 09, 2025 8:58:39 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 09, 2025 8:59:26 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 09, 2025 8:59:39 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 09, 2025 9:00:03 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.04.09 15:36:43 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json or C:\Users\LENOVO\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2025.04.09 15:37:00 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.09 15:37:00 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.1.
+2025.04.09 15:37:08 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.09 15:37:09 WARN  Build server is not auto-connectable.
+Apr 09, 2025 4:03:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.04.09 16:04:12 INFO  Shutting down server
+2025.04.09 16:04:12 INFO  shutting down Metals
+2025.04.09 16:04:12 INFO  Exiting server
+2025.04.09 16:42:48 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.1.
+2025.04.09 16:42:48 INFO  time: initialize in 0.12s
+2025.04.09 16:42:53 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.09 16:42:53 WARN  Build server is not auto-connectable.
+Apr 09, 2025 4:44:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.04.10 01:13:28 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.1.
+2025.04.10 01:13:35 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.10 01:13:35 WARN  Build server is not auto-connectable.
+2025.04.10 08:15:08 INFO  Shutting down server
+2025.04.10 08:15:08 INFO  shutting down Metals
+2025.04.10 08:15:08 INFO  Exiting server
+2025.04.10 10:41:38 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json
+2025.04.10 10:41:58 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.10 10:41:58 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.1.
+2025.04.10 10:41:59 INFO  time: initialize in 0.12s
+2025.04.10 10:42:05 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.10 10:42:06 WARN  Build server is not auto-connectable.
+Apr 10, 2025 10:46:30 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.04.10 15:51:03 INFO  Shutting down server
+2025.04.10 15:51:03 INFO  shutting down Metals
+2025.04.11 10:22:15 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json
+2025.04.11 10:22:40 ERROR Failed to get project directories
+java.util.concurrent.TimeoutException: Future timed out after [5 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:248)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:261)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:201)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:62)
+	at scala.concurrent.Await$.result(package.scala:124)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.$anonfun$wrap$1(MetalsProjectDirectories.scala:43)
+	at scala.util.Try$.apply(Try.scala:217)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.wrap(MetalsProjectDirectories.scala:41)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.from(MetalsProjectDirectories.scala:27)
+	at scala.meta.internal.metals.BloopServers$.createBloopWorkingDir(BloopServers.scala:440)
+	at scala.meta.internal.metals.BloopServers.<init>(BloopServers.scala:67)
+	at scala.meta.internal.metals.ProjectMetalsLspService.<init>(ProjectMetalsLspService.scala:143)
+	at scala.meta.internal.metals.WorkspaceLspService.createService(WorkspaceLspService.scala:247)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$workspaceFolders$1(WorkspaceLspService.scala:254)
+	at scala.collection.immutable.List.map(List.scala:247)
+	at scala.meta.internal.metals.WorkspaceFolders.initServices(WorkspaceFolders.scala:43)
+	at scala.meta.internal.metals.WorkspaceFolders.<init>(WorkspaceFolders.scala:22)
+	at scala.meta.internal.metals.WorkspaceLspService.<init>(WorkspaceLspService.scala:252)
+	at scala.meta.metals.MetalsLanguageServer.createService(MetalsLanguageServer.scala:219)
+	at scala.meta.metals.MetalsLanguageServer.initialize(MetalsLanguageServer.scala:160)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:271)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1575)
+
+2025.04.11 10:22:40 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.11 10:22:40 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.1.
+2025.04.11 10:22:41 INFO  time: initialize in 0.17s
+2025.04.11 10:22:57 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.11 10:22:58 WARN  Build server is not auto-connectable.
+Apr 11, 2025 10:23:44 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 11, 2025 10:23:44 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 11, 2025 10:23:44 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Apr 11, 2025 10:23:44 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.04.11 10:23:50 INFO  Shutting down server
+2025.04.11 10:23:50 INFO  shutting down Metals
+2025.04.11 10:23:50 INFO  Exiting server
+2025.04.11 11:23:07 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json or C:\Users\LENOVO\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2025.04.11 11:23:27 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.11 11:23:27 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.1.
+2025.04.11 11:23:27 INFO  time: initialize in 0.11s
