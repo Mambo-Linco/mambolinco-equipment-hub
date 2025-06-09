@@ -1,29 +1,3 @@
-/*import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;*/
-
 import React, { useState, useEffect } from "react";
 import { Box } from "@mui/material";
 import Header from "./components/Header";
@@ -31,7 +5,15 @@ import Equipment from "./pages/Equipment";
 import Dashboard from "./pages/Dashboard";
 import AddEquipment from "./pages/AddEquipment";
 import Footer from "./components/Footer";
-import { firestore } from "./firebase"; // Adjust the path as needed
+import ViewEquipment from "./pages/ViewEquipment";
+import EditEquipment from "./pages/EditEquipment";
+import { ToastProvider } from "./components/Toast";
+import Borrowings from "./pages/Borrowings";
+import Rentals from "./pages/Rentals";
+import Reports from "./pages/Reports";
+// Correct import path
+//import { db, storage } from "../firebase/config";
+import { db, storage } from "./firebase.js";
 import { fetchEquipmentData } from "./services/api";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -73,39 +55,31 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Box
-        sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
-      >
-        <Header />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Dashboard
-                equipmentData={equipmentData}
-                loading={loading}
-                stats={stats}
+    <ToastProvider>
+      <Router>
+        <Box
+          sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+        >
+          <Header />
+          <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+            <Routes>
+              <Route path="/" element={<Dashboard stats={stats} />} />
+              <Route
+                path="/equipment"
+                element={<Equipment data={equipmentData} loading={loading} />}
               />
-            }
-          />
-          <Route path="/equipment" element={<Equipment />} />
-          <Route path="/equipment/add" element={<AddEquipment />} />
-          {/* Add more routes as needed */}
-        </Routes>
-        <Footer />
-      </Box>
-    </Router>
-    /*
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Header />
-      <Dashboard
-        equipmentData={equipmentData}
-        loading={loading}
-        stats={stats}
-      />
-      <Footer />
-    </Box>*/
+              <Route path="/equipment/add" element={<AddEquipment />} />
+              <Route path="/equipment/view/:id" element={<ViewEquipment />} />
+              <Route path="/equipment/edit/:id" element={<EditEquipment />} />
+              <Route path="/borrowings" element={<Borrowings />} />
+              <Route path="/rentals" element={<Rentals />} />
+              <Route path="/reports" element={<Reports />} />
+            </Routes>
+          </Box>
+          <Footer />
+        </Box>
+      </Router>
+    </ToastProvider>
   );
 }
 

@@ -109,3 +109,224 @@ INFO: Unsupported notification method: $/setTrace
 2025.04.11 11:23:27 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
 2025.04.11 11:23:27 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.1.
 2025.04.11 11:23:27 INFO  time: initialize in 0.11s
+2025.04.11 11:23:35 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.11 11:23:35 WARN  Build server is not auto-connectable.
+2025.04.11 12:29:51 INFO  Shutting down server
+2025.04.11 12:29:51 INFO  shutting down Metals
+2025.04.11 12:29:51 INFO  Exiting server
+2025.04.11 14:37:22 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json
+2025.04.11 14:37:41 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.11 14:37:41 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.1.
+2025.04.11 14:37:46 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.11 14:37:46 WARN  Build server is not auto-connectable.
+2025.04.12 08:50:20 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.1.
+2025.04.12 08:50:26 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.12 08:50:28 WARN  Build server is not auto-connectable.
+Apr 12, 2025 9:31:21 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.04.12 13:09:52 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json or C:\Users\LENOVO\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2025.04.12 13:10:18 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.12 13:10:18 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.1.
+2025.04.12 13:10:19 INFO  time: initialize in 0.14s
+2025.04.12 13:10:29 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.12 13:10:30 WARN  Build server is not auto-connectable.
+2025.04.12 14:13:16 INFO  Shutting down server
+2025.04.12 14:13:16 INFO  shutting down Metals
+2025.04.12 14:13:16 INFO  Exiting server
+2025.04.13 02:09:37 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json or C:\Users\LENOVO\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2025.04.13 02:09:52 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.13 02:09:52 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.2.
+2025.04.13 02:10:00 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.13 02:10:00 WARN  Build server is not auto-connectable.
+2025.04.13 16:56:02 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json or C:\Users\LENOVO\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2025.04.13 16:56:34 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.13 16:56:34 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.2.
+2025.04.13 16:56:40 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.13 16:56:40 WARN  Build server is not auto-connectable.
+2025.04.13 20:30:10 INFO  Shutting down server
+2025.04.13 20:30:10 INFO  shutting down Metals
+2025.04.13 20:30:10 INFO  Exiting server
+2025.04.14 06:33:46 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json
+2025.04.14 06:33:53 ERROR Failed to get project directories
+java.util.concurrent.TimeoutException: Future timed out after [5 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:248)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:261)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:201)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:62)
+	at scala.concurrent.Await$.result(package.scala:124)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.$anonfun$wrap$1(MetalsProjectDirectories.scala:43)
+	at scala.util.Try$.apply(Try.scala:217)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.wrap(MetalsProjectDirectories.scala:41)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.fromPath(MetalsProjectDirectories.scala:34)
+	at scala.meta.internal.bsp.BspServers$.globalInstallDirectories(BspServers.scala:209)
+	at scala.meta.internal.metals.MetalsServerInputs$.productionConfiguration(MetalsServerInputs.scala:75)
+	at scala.meta.metals.MetalsLanguageServer$.$lessinit$greater$default$3(MetalsLanguageServer.scala:48)
+	at scala.meta.metals.Main$.main(Main.scala:52)
+	at scala.meta.metals.Main.main(Main.scala)
+
+2025.04.14 06:34:57 ERROR Failed to get project directories
+java.util.concurrent.TimeoutException: Future timed out after [5 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:248)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:261)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:201)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:62)
+	at scala.concurrent.Await$.result(package.scala:124)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.$anonfun$wrap$1(MetalsProjectDirectories.scala:43)
+	at scala.util.Try$.apply(Try.scala:217)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.wrap(MetalsProjectDirectories.scala:41)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.from(MetalsProjectDirectories.scala:27)
+	at scala.meta.internal.metals.BloopServers$.createBloopWorkingDir(BloopServers.scala:440)
+	at scala.meta.internal.metals.BloopServers.<init>(BloopServers.scala:67)
+	at scala.meta.internal.metals.ProjectMetalsLspService.<init>(ProjectMetalsLspService.scala:143)
+	at scala.meta.internal.metals.WorkspaceLspService.createService(WorkspaceLspService.scala:247)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$workspaceFolders$1(WorkspaceLspService.scala:254)
+	at scala.collection.immutable.List.map(List.scala:247)
+	at scala.meta.internal.metals.WorkspaceFolders.initServices(WorkspaceFolders.scala:43)
+	at scala.meta.internal.metals.WorkspaceFolders.<init>(WorkspaceFolders.scala:22)
+	at scala.meta.internal.metals.WorkspaceLspService.<init>(WorkspaceLspService.scala:252)
+	at scala.meta.metals.MetalsLanguageServer.createService(MetalsLanguageServer.scala:219)
+	at scala.meta.metals.MetalsLanguageServer.initialize(MetalsLanguageServer.scala:160)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:271)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1575)
+
+2025.04.14 06:34:57 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.14 06:34:57 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.2.
+2025.04.14 06:34:57 INFO  time: initialize in 0.28s
+2025.04.14 06:35:03 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.14 06:35:04 WARN  Build server is not auto-connectable.
+2025.04.14 08:59:55 INFO  Shutting down server
+2025.04.14 08:59:55 INFO  shutting down Metals
+2025.04.14 08:59:55 INFO  Exiting server
+2025.04.14 20:10:26 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json
+2025.04.14 20:10:32 ERROR Failed to get project directories
+java.util.concurrent.TimeoutException: Future timed out after [5 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:248)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:261)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:201)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:62)
+	at scala.concurrent.Await$.result(package.scala:124)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.$anonfun$wrap$1(MetalsProjectDirectories.scala:43)
+	at scala.util.Try$.apply(Try.scala:217)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.wrap(MetalsProjectDirectories.scala:41)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.fromPath(MetalsProjectDirectories.scala:34)
+	at scala.meta.internal.bsp.BspServers$.globalInstallDirectories(BspServers.scala:209)
+	at scala.meta.internal.metals.MetalsServerInputs$.productionConfiguration(MetalsServerInputs.scala:75)
+	at scala.meta.metals.MetalsLanguageServer$.$lessinit$greater$default$3(MetalsLanguageServer.scala:48)
+	at scala.meta.metals.Main$.main(Main.scala:52)
+	at scala.meta.metals.Main.main(Main.scala)
+
+2025.04.14 20:11:01 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.14 20:11:01 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.2.
+2025.04.14 20:11:05 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.14 20:11:06 WARN  Build server is not auto-connectable.
+2025.04.15 13:28:21 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json
+2025.04.15 13:28:27 ERROR Failed to get project directories
+java.util.concurrent.TimeoutException: Future timed out after [5 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:248)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:261)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:201)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:62)
+	at scala.concurrent.Await$.result(package.scala:124)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.$anonfun$wrap$1(MetalsProjectDirectories.scala:43)
+	at scala.util.Try$.apply(Try.scala:217)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.wrap(MetalsProjectDirectories.scala:41)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.fromPath(MetalsProjectDirectories.scala:34)
+	at scala.meta.internal.bsp.BspServers$.globalInstallDirectories(BspServers.scala:209)
+	at scala.meta.internal.metals.MetalsServerInputs$.productionConfiguration(MetalsServerInputs.scala:75)
+	at scala.meta.metals.MetalsLanguageServer$.$lessinit$greater$default$3(MetalsLanguageServer.scala:48)
+	at scala.meta.metals.Main$.main(Main.scala:52)
+	at scala.meta.metals.Main.main(Main.scala)
+
+2025.04.15 13:28:59 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.15 13:28:59 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.2.
+2025.04.15 13:29:10 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.15 13:29:10 WARN  Build server is not auto-connectable.
+2025.04.16 07:55:48 INFO  Shutting down server
+2025.04.16 07:55:48 INFO  shutting down Metals
+2025.04.16 07:55:48 INFO  Exiting server
+2025.04.18 18:53:16 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.3.
+2025.04.18 18:53:19 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.18 18:53:19 WARN  Build server is not auto-connectable.
+2025.04.19 06:13:00 INFO  Shutting down server
+2025.04.19 06:13:00 INFO  shutting down Metals
+2025.04.19 06:13:00 INFO  Exiting server
+2025.04.28 15:01:16 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at c:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\lsp.trace.json
+2025.04.28 15:01:22 ERROR Failed to get project directories
+java.util.concurrent.TimeoutException: Future timed out after [5 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:248)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:261)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:201)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:62)
+	at scala.concurrent.Await$.result(package.scala:124)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.$anonfun$wrap$1(MetalsProjectDirectories.scala:43)
+	at scala.util.Try$.apply(Try.scala:217)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.wrap(MetalsProjectDirectories.scala:41)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.fromPath(MetalsProjectDirectories.scala:34)
+	at scala.meta.internal.bsp.BspServers$.globalInstallDirectories(BspServers.scala:209)
+	at scala.meta.internal.metals.MetalsServerInputs$.productionConfiguration(MetalsServerInputs.scala:75)
+	at scala.meta.metals.MetalsLanguageServer$.$lessinit$greater$default$3(MetalsLanguageServer.scala:48)
+	at scala.meta.metals.Main$.main(Main.scala:52)
+	at scala.meta.metals.Main.main(Main.scala)
+
+2025.04.28 15:02:08 ERROR Failed to get project directories
+java.util.concurrent.TimeoutException: Future timed out after [5 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:248)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:261)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:201)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:62)
+	at scala.concurrent.Await$.result(package.scala:124)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.$anonfun$wrap$1(MetalsProjectDirectories.scala:43)
+	at scala.util.Try$.apply(Try.scala:217)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.wrap(MetalsProjectDirectories.scala:41)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.from(MetalsProjectDirectories.scala:27)
+	at scala.meta.internal.metals.BloopServers$.createBloopWorkingDir(BloopServers.scala:440)
+	at scala.meta.internal.metals.BloopServers.<init>(BloopServers.scala:67)
+	at scala.meta.internal.metals.ProjectMetalsLspService.<init>(ProjectMetalsLspService.scala:143)
+	at scala.meta.internal.metals.WorkspaceLspService.createService(WorkspaceLspService.scala:247)
+	at scala.meta.internal.metals.WorkspaceLspService.$anonfun$workspaceFolders$1(WorkspaceLspService.scala:254)
+	at scala.collection.immutable.List.map(List.scala:247)
+	at scala.meta.internal.metals.WorkspaceFolders.initServices(WorkspaceFolders.scala:43)
+	at scala.meta.internal.metals.WorkspaceFolders.<init>(WorkspaceFolders.scala:22)
+	at scala.meta.internal.metals.WorkspaceLspService.<init>(WorkspaceLspService.scala:252)
+	at scala.meta.metals.MetalsLanguageServer.createService(MetalsLanguageServer.scala:219)
+	at scala.meta.metals.MetalsLanguageServer.initialize(MetalsLanguageServer.scala:160)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:128)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:271)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:201)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1575)
+
+2025.04.28 15:02:08 INFO  logging to files C:\Users\LENOVO\Desktop\equiptrack-frontend\.metals\metals.log
+2025.04.28 15:02:08 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.3.
+2025.04.28 15:02:08 INFO  time: initialize in 0.21s
+2025.04.28 15:02:13 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.28 15:02:14 WARN  Build server is not auto-connectable.
+2025.04.28 15:46:55 INFO  Shutting down server
+2025.04.28 15:46:55 INFO  shutting down Metals
+2025.04.28 15:46:55 INFO  Exiting server
+2025.05.12 09:25:28 INFO  Started: Metals version 1.5.2 in folders 'C:\Users\LENOVO\Desktop\equiptrack-frontend' for client Visual Studio Code 1.99.3.
+2025.05.12 09:25:35 WARN  no build tool detected in workspace 'C:\Users\LENOVO\Desktop\equiptrack-frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.05.12 09:25:36 WARN  Build server is not auto-connectable.
+2025.05.12 10:10:53 INFO  Shutting down server
+2025.05.12 10:10:53 INFO  shutting down Metals

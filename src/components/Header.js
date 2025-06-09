@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import { Link } from "react-router-dom"; // Add this import
 import {
   AppBar,
@@ -103,7 +103,7 @@ function Header() {
             >
               Equipment
             </Button>
-            {/*<Button color="inherit">Equipment</Button>*/}
+            {/*<Button color="inherit">Equipment</Button>/}
             <Button
               color="inherit"
               onClick={() => (window.location.href = "/equipment")}
@@ -181,6 +181,288 @@ function Header() {
         </Box>
       </Toolbar>
     </AppBar>
+  );
+}
+
+export default Header;*/
+
+import React, { useState } from "react";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton,
+  Box,
+  Menu,
+  MenuItem,
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Divider,
+  Avatar,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+import {
+  Menu as MenuIcon,
+  Dashboard as DashboardIcon,
+  Build as BuildIcon,
+  Person as PersonIcon,
+  Settings as SettingsIcon,
+  Logout as LogoutIcon,
+  Add as AddIcon,
+  BarChart as BarChartIcon,
+  Receipt as ReceiptIcon,
+  AttachMoney as MoneyIcon,
+} from "@mui/icons-material";
+import { Link, useLocation } from "react-router-dom";
+
+function Header() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const location = useLocation();
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleProfileMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleProfileMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+    setDrawerOpen(open);
+  };
+
+  // Check if the current path matches the given path
+  const isActive = (path) => {
+    return (
+      location.pathname === path || location.pathname.startsWith(`${path}/`)
+    );
+  };
+
+  const menuItems = [
+    { text: "Dashboard", icon: <DashboardIcon />, path: "/" },
+    { text: "Equipment", icon: <BuildIcon />, path: "/equipment" },
+    { text: "Borrowings", icon: <PersonIcon />, path: "/borrowings" },
+    { text: "Rentals", icon: <MoneyIcon />, path: "/rentals" },
+    { text: "Reports", icon: <BarChartIcon />, path: "/reports" },
+  ];
+
+  const drawer = (
+    <Box
+      sx={{ width: 250 }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+    >
+      <Box
+        sx={{
+          p: 2,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Typography
+          variant="h6"
+          component="div"
+          sx={{ fontWeight: "bold", color: theme.palette.primary.main }}
+        >
+          EquipTrack
+        </Typography>
+      </Box>
+      <Divider />
+      <List>
+        {menuItems.map((item) => (
+          <ListItem
+            button
+            key={item.text}
+            component={Link}
+            to={item.path}
+            sx={{
+              bgcolor: isActive(item.path)
+                ? alpha(theme.palette.primary.main, 0.1)
+                : "transparent",
+              color: isActive(item.path)
+                ? theme.palette.primary.main
+                : "inherit",
+              "&:hover": {
+                bgcolor: alpha(theme.palette.primary.main, 0.05),
+              },
+            }}
+          >
+            <ListItemIcon
+              sx={{
+                color: isActive(item.path)
+                  ? theme.palette.primary.main
+                  : "inherit",
+                minWidth: 40,
+              }}
+            >
+              {item.icon}
+            </ListItemIcon>
+            <ListItemText primary={item.text} />
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        <ListItem button>
+          <ListItemIcon sx={{ minWidth: 40 }}>
+            <SettingsIcon />
+          </ListItemIcon>
+          <ListItemText primary="Settings" />
+        </ListItem>
+      </List>
+    </Box>
+  );
+
+  // Helper function for alpha color
+  function alpha(color, opacity) {
+    return color + opacity.toString(16).padStart(2, "0");
+  }
+
+  return (
+    <>
+      <AppBar
+        position="static"
+        color="default"
+        elevation={0}
+        sx={{ bgcolor: "white", borderBottom: "1px solid #e0e0e0" }}
+      >
+        <Toolbar>
+          {isMobile ? (
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              onClick={toggleDrawer(true)}
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
+          ) : (
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{
+                flexGrow: 0,
+                fontWeight: "bold",
+                color: theme.palette.primary.main,
+                mr: 4,
+              }}
+            >
+              MAMBO LINCO EQUIPMENT HUB
+            </Typography>
+          )}
+
+          {!isMobile && (
+            <Box sx={{ flexGrow: 1, display: "flex" }}>
+              {menuItems.map((item) => (
+                <Button
+                  key={item.text}
+                  component={Link}
+                  to={item.path}
+                  startIcon={item.icon}
+                  sx={{
+                    mr: 1,
+                    color: isActive(item.path)
+                      ? theme.palette.primary.main
+                      : "text.primary",
+                    fontWeight: isActive(item.path) ? "bold" : "medium",
+                    "&:hover": {
+                      bgcolor: alpha(theme.palette.primary.main, 0.05),
+                    },
+                  }}
+                >
+                  {item.text}
+                </Button>
+              ))}
+            </Box>
+          )}
+
+          <Box sx={{ flexGrow: 0 }}>
+            <Button
+              variant="contained"
+              startIcon={<AddIcon />}
+              component={Link}
+              to="/equipment/add"
+              sx={{
+                mr: 2,
+                bgcolor: theme.palette.primary.main,
+                "&:hover": {
+                  bgcolor: theme.palette.primary.dark,
+                },
+              }}
+            >
+              Add Equipment
+            </Button>
+
+            <IconButton onClick={handleProfileMenuOpen} sx={{ p: 0 }}>
+              <Avatar sx={{ bgcolor: theme.palette.primary.main }}>
+                <PersonIcon />
+              </Avatar>
+            </IconButton>
+
+            <Menu
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={handleProfileMenuClose}
+              PaperProps={{
+                elevation: 0,
+                sx: {
+                  overflow: "visible",
+                  filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.1))",
+                  mt: 1.5,
+                  "& .MuiMenuItem-root": {
+                    px: 2,
+                    py: 1,
+                  },
+                },
+              }}
+              transformOrigin={{ horizontal: "right", vertical: "top" }}
+              anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+            >
+              <MenuItem onClick={handleProfileMenuClose}>
+                <ListItemIcon>
+                  <PersonIcon fontSize="small" />
+                </ListItemIcon>
+                <ListItemText>Profile</ListItemText>
+              </MenuItem>
+              <MenuItem onClick={handleProfileMenuClose}>
+                <ListItemIcon>
+                  <SettingsIcon fontSize="small" />
+                </ListItemIcon>
+                <ListItemText>Settings</ListItemText>
+              </MenuItem>
+              <Divider />
+              <MenuItem onClick={handleProfileMenuClose}>
+                <ListItemIcon>
+                  <LogoutIcon fontSize="small" />
+                </ListItemIcon>
+                <ListItemText>Logout</ListItemText>
+              </MenuItem>
+            </Menu>
+          </Box>
+        </Toolbar>
+      </AppBar>
+
+      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+        {drawer}
+      </Drawer>
+    </>
   );
 }
 

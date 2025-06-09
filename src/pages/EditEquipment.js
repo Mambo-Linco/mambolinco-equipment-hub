@@ -1,6 +1,4 @@
-import React, { useState, useRef } from "react";
-import { db } from "../firebase";
-import { addDoc, collection } from "firebase/firestore";
+import React, { useState, useRef, useEffect } from "react";
 import {
   Box,
   Container,
@@ -24,6 +22,7 @@ import {
   Divider,
   alpha,
   useTheme,
+  CircularProgress,
 } from "@mui/material";
 import {
   CalendarToday as CalendarIcon,
@@ -31,19 +30,31 @@ import {
   ArrowBack as ArrowBackIcon,
   Save as SaveIcon,
   Cancel as CancelIcon,
-  Add as AddIcon,
+  Edit as EditIcon,
   CloudUpload as CloudUploadIcon,
   Delete as DeleteIcon,
   PhotoCamera as PhotoCameraIcon,
 } from "@mui/icons-material";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
+// Firebase imports
+import { doc, getDoc, updateDoc, serverTimestamp } from "firebase/firestore";
+import {
+  ref,
+  uploadBytes,
+  getDownloadURL,
+  deleteObject,
+} from "firebase/storage";
+import { db, storage } from "../firebase.js";
+import { useToast } from "../components/Toast";
 
-function AddEquipment() {
+function EditEquipment() {
   const theme = useTheme();
   const navigate = useNavigate();
+  const { id } = useParams();
   const fileInputRef = useRef(null);
+  const { showToast } = useToast();
 
   const [formData, setFormData] = useState({
     inStock: true,
@@ -63,8 +74,80 @@ function AddEquipment() {
 
   const [imageFile, setImageFile] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
+  const [existingImagePath, setExistingImagePath] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch equipment data on component mount
+  useEffect(() => {
+    const fetchEquipment = async () => {
+      try {
+        setLoading(true);
+        console.log("Fetching equipment with ID:", id);
+
+        const docRef = doc(db, "equipment", id);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          console.log("Document data:", docSnap.data());
+          const data = docSnap.data();
+
+          // Convert Firebase timestamp to Date object if it exists
+          let lastUpdated = null;
+          if (data.lastUpdated) {
+            lastUpdated = data.lastUpdated.toDate
+              ? data.lastUpdated.toDate()
+              : new Date(data.lastUpdated);
+          }
+
+          setFormData({
+            inStock: data.inStock ?? true,
+            equipmentId: data.equipmentId ?? "",
+            name: data.name ?? "",
+            category: data.category ?? "",
+            serialNumber: data.serialNumber ?? "",
+            status: data.status ?? "",
+            issues: data.issues ?? "",
+            value: data.value ? data.value.toString() : "",
+            powerVoltage: data.powerVoltage ? data.powerVoltage.toString() : "",
+            voltage: data.voltage ? data.voltage.toString() : "",
+            location: data.location ?? "",
+            lastUpdated: lastUpdated,
+            action: data.action ?? "Schedule Maintenance",
+          });
+
+          // Set image preview if available
+          if (data.imageUrl) {
+            setImagePreview(data.imageUrl);
+          }
+
+          // Store the existing image path for later use
+          if (data.imagePath) {
+            setExistingImagePath(data.imagePath);
+          }
+
+          setLoading(false);
+        } else {
+          console.log("No such document!");
+          showToast("Equipment not found", "error");
+          setError("Equipment not found");
+          setLoading(false);
+          setTimeout(() => {
+            navigate("/equipment");
+          }, 2000);
+        }
+      } catch (err) {
+        console.error("Error fetching equipment:", err);
+        showToast(`Error loading equipment data: ${err.message}`, "error");
+        setError("Error loading equipment data");
+        setLoading(false);
+      }
+    };
+
+    fetchEquipment();
+  }, [id, navigate, showToast]);
 
   const handleChange = (event) => {
     const { name, value, checked } = event.target;
@@ -81,6 +164,7 @@ function AddEquipment() {
     });
   };
 
+  // Image upload handlers
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     if (file && file.type.substr(0, 5) === "image") {
@@ -137,24 +221,105 @@ function AddEquipment() {
     setIsSubmitting(true);
 
     try {
-      // Prepare the data to send to Firestore
+      // Validate required fields
+      if (
+        !formData.equipmentId ||
+        !formData.name ||
+        !formData.category ||
+        !formData.serialNumber ||
+        !formData.status ||
+        !formData.value ||
+        !formData.powerVoltage ||
+        !formData.voltage ||
+        !formData.location
+      ) {
+        showToast("Please fill in all required fields", "error");
+        setIsSubmitting(false);
+        return;
+      }
+
+      let imagePath = existingImagePath;
+      let imageUrl = imagePreview;
+
+      // If a new image is selected, upload it and delete the old one
+      if (imageFile) {
+        try {
+          // Delete old image if it exists
+          if (existingImagePath) {
+            try {
+              const oldImageRef = ref(storage, existingImagePath);
+              await deleteObject(oldImageRef);
+              console.log("Old image deleted successfully");
+            } catch (deleteError) {
+              console.error("Error deleting old image:", deleteError);
+              // Continue with the update even if deleting the old image fails
+            }
+          }
+
+          // Upload new image
+          const storageRef = ref(
+            storage,
+            `equipment-images/${Date.now()}-${imageFile.name}`
+          );
+          const snapshot = await uploadBytes(storageRef, imageFile);
+          console.log("New image uploaded successfully:", snapshot);
+
+          imageUrl = await getDownloadURL(storageRef);
+          console.log("New image URL obtained:", imageUrl);
+
+          imagePath = storageRef.fullPath;
+        } catch (uploadError) {
+          console.error("Error handling image:", uploadError);
+          showToast(`Error uploading image: ${uploadError.message}`, "error");
+          setIsSubmitting(false);
+          return;
+        }
+      }
+
+      // If image was removed (and no new one selected)
+      if (!imagePreview && existingImagePath) {
+        try {
+          const oldImageRef = ref(storage, existingImagePath);
+          await deleteObject(oldImageRef);
+          console.log("Image deleted successfully");
+          imagePath = null;
+          imageUrl = null;
+        } catch (error) {
+          console.error("Error deleting old image:", error);
+        }
+      }
+
+      // Prepare data for Firestore update
       const equipmentData = {
         ...formData,
-        lastUpdated: formData.lastUpdated
-          ? formData.lastUpdated.toISOString()
-          : null,
-        createdAt: new Date().toISOString(),
-        imageUrl: imagePreview || null,
+        value: formData.value ? parseFloat(formData.value) : 0,
+        powerVoltage: formData.powerVoltage
+          ? parseFloat(formData.powerVoltage)
+          : 0,
+        voltage: formData.voltage ? parseFloat(formData.voltage) : 0,
+        lastUpdated: formData.lastUpdated || serverTimestamp(),
+        updatedAt: serverTimestamp(),
+        imagePath,
+        imageUrl,
       };
 
-      // Save the data to Firestore
-      const docRef = await addDoc(collection(db, "equipment"), equipmentData);
-      console.log("Document written with ID: ", docRef.id);
+      console.log("Updating equipment data:", equipmentData);
 
-      // After successful submission, navigate back to equipment list
-      navigate("/equipment");
+      // Update document in Firestore
+      const equipmentRef = doc(db, "equipment", id);
+      await updateDoc(equipmentRef, equipmentData);
+      console.log("Document updated successfully");
+
+      // Show success message
+      showToast("Equipment updated successfully!", "success");
+
+      // Navigate back to equipment list
+      setTimeout(() => {
+        navigate("/equipment");
+      }, 1000);
     } catch (error) {
-      console.error("Error adding document: ", error);
+      console.error("Error updating equipment:", error);
+      showToast(`Error updating equipment: ${error.message}`, "error");
     } finally {
       setIsSubmitting(false);
     }
@@ -203,6 +368,47 @@ function AddEquipment() {
     },
   };
 
+  if (loading) {
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <CircularProgress />
+      </Box>
+    );
+  }
+
+  if (error) {
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          flexDirection: "column",
+        }}
+      >
+        <Typography variant="h6" color="error" gutterBottom>
+          {error}
+        </Typography>
+        <Button
+          variant="contained"
+          component={Link}
+          to="/equipment"
+          sx={{ mt: 2 }}
+        >
+          Back to Equipment List
+        </Button>
+      </Box>
+    );
+  }
+
   return (
     <Box
       sx={{
@@ -224,7 +430,7 @@ function AddEquipment() {
             <IconButton
               edge="start"
               component={Link}
-              to="/"
+              to="/equipment"
               sx={{ mr: 2, color: theme.palette.text.secondary }}
             >
               <ArrowBackIcon />
@@ -272,7 +478,7 @@ function AddEquipment() {
               gap: 1,
             }}
           >
-            <AddIcon sx={{ fontSize: 28 }} /> Add New Equipment
+            <EditIcon sx={{ fontSize: 28 }} /> Edit Equipment
           </Typography>
 
           <form onSubmit={handleSubmit}>
@@ -890,7 +1096,7 @@ function AddEquipment() {
                   boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
                 }}
               >
-                {isSubmitting ? "Saving..." : "Save"}
+                {isSubmitting ? "Saving..." : "Update"}
               </Button>
             </Box>
           </form>
@@ -900,4 +1106,4 @@ function AddEquipment() {
   );
 }
 
-export default AddEquipment;
+export default EditEquipment;
