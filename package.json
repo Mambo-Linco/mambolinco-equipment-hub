@@ -1,6 +1,5 @@
 {
   "name": "equiptrack-frontend",
-  "homepage": "https://github.com/Mambo-Linco/mambolinco-equipment-hub.git",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
