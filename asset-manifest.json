@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mambolinco-equipment-hub.git/static/css/main.498b96c8.css",
+    "main.js": "/mambolinco-equipment-hub.git/static/js/main.3568053c.js",
+    "index.html": "/mambolinco-equipment-hub.git/index.html",
+    "main.498b96c8.css.map": "/mambolinco-equipment-hub.git/static/css/main.498b96c8.css.map",
+    "main.3568053c.js.map": "/mambolinco-equipment-hub.git/static/js/main.3568053c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.498b96c8.css",
+    "static/js/main.3568053c.js"
+  ]
+}
