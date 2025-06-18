@@ -167,12 +167,24 @@ function AddEquipment() {
   // Category options
   const categories = [
     "Electronics",
-    "Machinery",
-    "Tools",
-    "Office Equipment",
-    "Audio/Visual",
-    "Photography",
-    "Manufacturing",
+    "Photo Cameras",
+    "Video Cameras",
+    "Lenses",
+    "Mixers & Mics",
+    "Table Cloth",
+    "Lighting",
+    "Tripods & Stands",
+    "Audio Cables",
+    "Video Cables etc",
+    "Power/Electricity",
+    "Storage",
+    "Accessories",
+    "19inch Monitors",
+    "Stands",
+    "Network",
+    "Batteries",
+    "Laptops",
+    "New Gear"
   ];
 
   // Status options
